@@ -15,7 +15,7 @@ const books = [
         excerpt:
             "A comprehensive guide to mastering React.js, from fundamentals to advanced component patterns.",
         imageUrl:
-            "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781626860605/the-art-of-war-9781626860605_hr.jpg",
+            "https://images.unsplash.com/photo-1746252000365-25e7fe205344?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8",
         href: "#",
         author: "Sun Tzu",
         downloadUrl: "#",
@@ -27,7 +27,7 @@ const books = [
         excerpt:
             "Build beautiful, responsive UIs with Tailwind CSS. Includes real-world projects and tips.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg",
+            "https://images.unsplash.com/photo-1746068521443-9332b12c9ed8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Paulo Coelho",
         downloadUrl: "#",
@@ -39,7 +39,7 @@ const books = [
         excerpt:
             "Unlock the power of TypeScript with advanced typing, generics, and practical patterns.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1597798677i/55019161.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Dan Brown",
         downloadUrl: "#",
@@ -51,7 +51,7 @@ const books = [
         excerpt:
             "A hands-on guide to building production-ready apps with Next.js, SSR, and API routes.",
         imageUrl:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn7ZiCC1pXj2nRwMHVM1fhMckGztdhGrUn7w&s",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Dan Brown",
         downloadUrl: "#",
@@ -63,7 +63,7 @@ const books = [
         excerpt:
             "A timeless classic that explores human morality and the roots of prejudice.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/81OdwZ9U6PL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Harper Lee",
         downloadUrl: "#",
@@ -75,7 +75,7 @@ const books = [
         excerpt:
             "George Orwell's dystopian masterpiece, a chilling prophecy about the future.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/71kxa1-0mfL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "George Orwell",
         downloadUrl: "#",
@@ -87,7 +87,7 @@ const books = [
         excerpt:
             "Jane Austen's romantic classic, a witty commentary on society and relationships.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/81A-mvlo+QL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Jane Austen",
         downloadUrl: "#",
@@ -99,7 +99,7 @@ const books = [
         excerpt:
             "F. Scott Fitzgerald's tale of wealth, love, and the American Dream.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/81af+MCATTL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "F. Scott Fitzgerald",
         downloadUrl: "#",
@@ -111,7 +111,7 @@ const books = [
         excerpt:
             "Herman Melville's epic tale of obsession and revenge on the high seas.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/81prV6wS5QL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Herman Melville",
         downloadUrl: "#",
@@ -123,7 +123,7 @@ const books = [
         excerpt:
             "Aldous Huxley's vision of a future society driven by technology and control.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/81rttWlZgLL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Aldous Huxley",
         downloadUrl: "#",
@@ -135,7 +135,7 @@ const books = [
         excerpt:
             "Louisa May Alcott's beloved story of four sisters growing up during the American Civil War.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/81WojUxbbFL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Louisa May Alcott",
         downloadUrl: "#",
@@ -147,7 +147,7 @@ const books = [
         excerpt:
             "J.R.R. Tolkien's classic adventure of Bilbo Baggins and his journey to the Lonely Mountain.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/91b0C2YNSrL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "J.R.R. Tolkien",
         downloadUrl: "#",
@@ -159,7 +159,7 @@ const books = [
         excerpt:
             "Fyodor Dostoevsky's psychological drama of guilt, redemption, and morality.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Fyodor Dostoevsky",
         downloadUrl: "#",
@@ -171,7 +171,7 @@ const books = [
         excerpt:
             "J.D. Salinger's coming-of-age novel about teenage alienation and rebellion.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/71Q1Iu4suSL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "J.D. Salinger",
         downloadUrl: "#",
@@ -183,7 +183,7 @@ const books = [
         excerpt:
             "J.R.R. Tolkien's epic fantasy trilogy that changed the world of literature forever.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/91SZSW8qSsL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "J.R.R. Tolkien",
         downloadUrl: "#",
@@ -195,7 +195,7 @@ const books = [
         excerpt:
             "Mary Shelley's gothic masterpiece about creation, ambition, and the dangers of playing God.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/81r+LNw1uPL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Mary Shelley",
         downloadUrl: "#",
@@ -207,7 +207,7 @@ const books = [
         excerpt:
             "Bram Stoker's classic horror novel that introduced the world to Count Dracula.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL._AC_UL600_SR600,600_.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Bram Stoker",
         downloadUrl: "#",
@@ -219,7 +219,7 @@ const books = [
         excerpt:
             "Homer's ancient Greek epic poem chronicling Odysseus's adventurous return home.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/81t2CVWEsUL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Homer",
         downloadUrl: "#",
@@ -231,7 +231,7 @@ const books = [
         excerpt:
             "Emily Brontë's only novel, a tale of passion and revenge on the Yorkshire moors.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/81A-mvlo+QL._AC_UL600_SR600,600_.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Emily Brontë",
         downloadUrl: "#",
@@ -243,7 +243,7 @@ const books = [
         excerpt:
             "Charles Dickens's story of the orphan Pip and his journey through life and society.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/I/81eA+K8QHPL.jpg",
+            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Charles Dickens",
         downloadUrl: "#",
