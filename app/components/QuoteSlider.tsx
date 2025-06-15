@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 
@@ -53,10 +54,12 @@ export default function QuoteSlider() {
                                 {quotes[current].text}
                             </p>
                             <div className="mt-8 flex items-center text-white gap-4">
-                                <img
+                                <Image
                                     src={quotes[current].avatar}
                                     className="size-10 rounded-full object-cover object-center lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-4/12 lg:rounded-none"
                                     alt={quotes[current].name}
+                                    width={40}
+                                    height={40}
                                 />
                                 <div className="flex flex-col gap-0.5 lg:gap-1.5">
                                     <span className="text-sm font-semibold lg:text-base">

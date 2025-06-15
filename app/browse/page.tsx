@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { ArrowRight, Download } from "lucide-react";
+import Image from "next/image";
 
 const books = [
     {
@@ -224,12 +225,14 @@ function BookModal({
                     className="absolute top-4 right-4 text-white/60 hover:text-white text-2xl font-bold"
                     aria-label="Close"
                 >
-                    ×
+                    X
                 </button>
                 <div className="flex flex-col sm:flex-row gap-6">
-                    <img
+                    <Image
                         src={book.imageUrl}
                         alt={book.title}
+                        width={160}
+                        height={224}
                         className="w-40 h-56 object-cover rounded-xl border-2 border-neutral-800 shadow-md mx-auto sm:mx-0"
                     />
                     <div className="flex-1 flex flex-col justify-between">
@@ -315,7 +318,8 @@ export default function BrowsePage() {
                                 Book not found
                             </div>
                             <div className="text-base text-neutral-400">
-                                We couldn't find any books matching your search.
+                                We couldn&apos;t find any books matching your
+                                search.
                             </div>
                         </div>
                     </div>
@@ -329,9 +333,11 @@ export default function BrowsePage() {
                                     onClick={() => setSelectedBook(book)}
                                 >
                                     <div className="w-full flex justify-center">
-                                        <img
+                                        <Image
                                             src={book.imageUrl}
                                             alt={book.title}
+                                            width={160}
+                                            height={224}
                                             className="aspect-[3/4] w-40 rounded-xl object-cover object-center border-2 border-neutral-800 shadow-md group-hover:scale-105 transition-transform"
                                         />
                                     </div>

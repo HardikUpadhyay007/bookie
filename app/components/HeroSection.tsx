@@ -1,4 +1,5 @@
 // import Navbar from "./Navbar";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -8,10 +9,13 @@ export default function HeroSection() {
         <header className="dark min-h-screen w-full relative flex flex-col">
             {/* Background image and overlay */}
             <div className="absolute inset-0 z-0">
-                <img
+                <Image
                     className="h-full w-full object-cover object-center"
                     src="https://images.unsplash.com/photo-1738937541345-4407f6fec8e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Hero background"
+                    fill
+                    priority
+                    sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-background/80"></div>
             </div>

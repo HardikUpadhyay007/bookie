@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { ArrowRight, Download } from "lucide-react";
+import Image from "next/image";
 
 const posts = [
     {
@@ -40,7 +41,8 @@ const posts = [
         excerpt:
             "A hands-on guide to building production-ready apps with Next.js, SSR, and API routes.",
         imageUrl:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn7ZiCC1pXj2nRwMHVM1fhMckGztdhGrUn7w&s",
+            "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9780593653960/angels-and-demons-9780593653960_hr.jpg",
+        // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn7ZiCC1pXj2nRwMHVM1fhMckGztdhGrUn7w&s",
         href: "#",
     },
 ];
@@ -66,9 +68,11 @@ function BookModal({
                     ×
                 </button>
                 <div className="flex flex-col sm:flex-row gap-6">
-                    <img
+                    <Image
                         src={book.imageUrl}
                         alt={book.title}
+                        width={160}
+                        height={224}
                         className="w-40 h-56 object-cover rounded-xl border-2 border-neutral-800 shadow-md mx-auto sm:mx-0"
                     />
                     <div className="flex-1 flex flex-col justify-between">
@@ -137,9 +141,11 @@ export default function LatestBooks() {
                             onClick={() => setSelectedBook(post)}
                         >
                             <div className="w-full flex justify-center">
-                                <img
+                                <Image
                                     src={post.imageUrl}
                                     alt={post.title}
+                                    width={160}
+                                    height={224}
                                     className="aspect-[3/4] w-40 rounded-xl object-cover object-center border-2 border-neutral-800 shadow-md group-hover:scale-105 transition-transform"
                                 />
                             </div>

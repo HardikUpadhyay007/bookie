@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Star } from "lucide-react";
 
@@ -66,10 +67,12 @@ export default function TestimonialSection() {
                             </CardContent>
                             <CardFooter>
                                 <div className="flex items-center gap-4">
-                                    <img
+                                    <Image
                                         className="size-10 rounded-full"
                                         src={testimonial.avatarUrl}
                                         alt={testimonial.name}
+                                        width={40}
+                                        height={40}
                                     />
                                     <div className="flex flex-col gap-0.5">
                                         <span className="text-sm font-medium text-white">
