@@ -1,5 +1,8 @@
 "use client";
-import { useState } from "react";
+
+export const dynamic = "force-dynamic";
+
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { ArrowRight, Download } from "lucide-react";
 import Image from "next/image";
@@ -281,7 +284,6 @@ function BookModal({
                                 {book.title}
                             </h2>
                             <div className="text-sm text-white/60 mb-2">
-                                {/* If you have author info, show here */}
                                 <span className="font-semibold">
                                     {book.author || "Unknown Author"}
                                 </span>
@@ -310,7 +312,7 @@ function BookModal({
 
 const BOOKS_PER_PAGE = 10;
 
-export default function BrowsePage() {
+function BrowseContent() {
     const [page, setPage] = useState(1);
     const [selectedBook, setSelectedBook] = useState<null | (typeof books)[0]>(
         null
@@ -442,5 +444,13 @@ export default function BrowsePage() {
                 onClose={() => setSelectedBook(null)}
             />
         </section>
+    );
+}
+
+export default function BrowsePage() {
+    return (
+        <Suspense>
+            <BrowseContent />
+        </Suspense>
     );
 }
