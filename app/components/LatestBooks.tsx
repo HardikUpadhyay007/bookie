@@ -13,6 +13,8 @@ const posts = [
         imageUrl:
             "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781626860605/the-art-of-war-9781626860605_hr.jpg",
         href: "#",
+        author: "Sun Tzu",
+        downloadUrl: "#",
     },
     {
         id: 2,
@@ -23,6 +25,8 @@ const posts = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg",
         href: "#",
+        author: "Paulo Coelho",
+        downloadUrl: "#",
     },
     {
         id: 3,
@@ -33,6 +37,8 @@ const posts = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1597798677i/55019161.jpg",
         href: "#",
+        author: "Dan Brown",
+        downloadUrl: "#",
     },
     {
         id: 4,
@@ -42,8 +48,9 @@ const posts = [
             "A hands-on guide to building production-ready apps with Next.js, SSR, and API routes.",
         imageUrl:
             "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9780593653960/angels-and-demons-9780593653960_hr.jpg",
-        // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn7ZiCC1pXj2nRwMHVM1fhMckGztdhGrUn7w&s",
         href: "#",
+        author: "Dan Brown",
+        downloadUrl: "#",
     },
 ];
 
@@ -56,7 +63,7 @@ function BookModal({
     open: boolean;
     onClose: () => void;
 }) {
-    if (!open) return null;
+    if (!open || !book) return null;
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
             <div className="relative bg-neutral-900 rounded-2xl shadow-2xl max-w-lg w-full mx-4 p-6 text-white">
@@ -174,11 +181,7 @@ export default function LatestBooks() {
                 </div>
             </div>
             <BookModal
-                book={{
-                    ...selectedBook,
-                    author: selectedBook?.author || "Unknown Author",
-                    downloadUrl: selectedBook?.downloadUrl || "#",
-                }}
+                book={selectedBook}
                 open={!!selectedBook}
                 onClose={() => setSelectedBook(null)}
             />
