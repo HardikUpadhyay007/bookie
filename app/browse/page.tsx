@@ -14,6 +14,8 @@ const books = [
         imageUrl:
             "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781626860605/the-art-of-war-9781626860605_hr.jpg",
         href: "#",
+        author: "Sun Tzu",
+        downloadUrl: "#",
     },
     {
         id: 2,
@@ -24,6 +26,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg",
         href: "#",
+        author: "Paulo Coelho",
+        downloadUrl: "#",
     },
     {
         id: 3,
@@ -34,6 +38,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1597798677i/55019161.jpg",
         href: "#",
+        author: "Dan Brown",
+        downloadUrl: "#",
     },
     {
         id: 4,
@@ -44,6 +50,8 @@ const books = [
         imageUrl:
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn7ZiCC1pXj2nRwMHVM1fhMckGztdhGrUn7w&s",
         href: "#",
+        author: "Dan Brown",
+        downloadUrl: "#",
     },
     {
         id: 5,
@@ -54,6 +62,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/81OdwZ9U6PL.jpg",
         href: "#",
+        author: "Harper Lee",
+        downloadUrl: "#",
     },
     {
         id: 6,
@@ -64,6 +74,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/71kxa1-0mfL.jpg",
         href: "#",
+        author: "George Orwell",
+        downloadUrl: "#",
     },
     {
         id: 7,
@@ -74,6 +86,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/81A-mvlo+QL.jpg",
         href: "#",
+        author: "Jane Austen",
+        downloadUrl: "#",
     },
     {
         id: 8,
@@ -84,6 +98,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/81af+MCATTL.jpg",
         href: "#",
+        author: "F. Scott Fitzgerald",
+        downloadUrl: "#",
     },
     {
         id: 9,
@@ -94,6 +110,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/81prV6wS5QL.jpg",
         href: "#",
+        author: "Herman Melville",
+        downloadUrl: "#",
     },
     {
         id: 10,
@@ -104,6 +122,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/81rttWlZgLL.jpg",
         href: "#",
+        author: "Aldous Huxley",
+        downloadUrl: "#",
     },
     {
         id: 11,
@@ -114,6 +134,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/81WojUxbbFL.jpg",
         href: "#",
+        author: "Louisa May Alcott",
+        downloadUrl: "#",
     },
     {
         id: 12,
@@ -124,6 +146,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/91b0C2YNSrL.jpg",
         href: "#",
+        author: "J.R.R. Tolkien",
+        downloadUrl: "#",
     },
     {
         id: 13,
@@ -134,6 +158,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg",
         href: "#",
+        author: "Fyodor Dostoevsky",
+        downloadUrl: "#",
     },
     {
         id: 14,
@@ -144,6 +170,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/71Q1Iu4suSL.jpg",
         href: "#",
+        author: "J.D. Salinger",
+        downloadUrl: "#",
     },
     {
         id: 15,
@@ -154,6 +182,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/91SZSW8qSsL.jpg",
         href: "#",
+        author: "J.R.R. Tolkien",
+        downloadUrl: "#",
     },
     {
         id: 16,
@@ -164,6 +194,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/81r+LNw1uPL.jpg",
         href: "#",
+        author: "Mary Shelley",
+        downloadUrl: "#",
     },
     {
         id: 17,
@@ -174,6 +206,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL._AC_UL600_SR600,600_.jpg",
         href: "#",
+        author: "Bram Stoker",
+        downloadUrl: "#",
     },
     {
         id: 18,
@@ -184,6 +218,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/81t2CVWEsUL.jpg",
         href: "#",
+        author: "Homer",
+        downloadUrl: "#",
     },
     {
         id: 19,
@@ -194,6 +230,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/81A-mvlo+QL._AC_UL600_SR600,600_.jpg",
         href: "#",
+        author: "Emily Brontë",
+        downloadUrl: "#",
     },
     {
         id: 20,
@@ -204,6 +242,8 @@ const books = [
         imageUrl:
             "https://images-na.ssl-images-amazon.com/images/I/81eA+K8QHPL.jpg",
         href: "#",
+        author: "Charles Dickens",
+        downloadUrl: "#",
     },
 ];
 
