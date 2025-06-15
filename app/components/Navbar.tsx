@@ -11,12 +11,7 @@ import { Menu, Search, Heart } from "lucide-react"; // Add Heart here
 import { useState } from "react";
 // import AuthSection from "./AuthSection";
 import Link from "next/link";
-import {
-    useUser,
-    SignInButton,
-    SignOutButton,
-    UserButton,
-} from "@clerk/nextjs";
+import { useUser, SignInButton, UserButton } from "@clerk/nextjs";
 import { useRouter, usePathname } from "next/navigation";
 
 const navItems = [

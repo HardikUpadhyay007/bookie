@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function FooterSection() {
     return (
         <footer className="py-16 bg-black text-white">
@@ -5,7 +7,7 @@ export default function FooterSection() {
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-5">
                     <div className="sm:col-span-3 lg:col-span-2">
                         <div className="max-w-xs">
-                            <a href="/" className="flex items-center gap-2">
+                            <Link href="/" className="flex items-center gap-2">
                                 <svg
                                     width="28"
                                     height="28"
@@ -27,7 +29,7 @@ export default function FooterSection() {
                                 <span className="text-[21px] leading-none font-bold tracking-tight">
                                     Bookie
                                 </span>
-                            </a>
+                            </Link>
                             <p className="mt-6 text-sm/6 text-white/80">
                                 Bookie helps you build beautiful websites faster
                                 with ready-to-use components and templates.
@@ -39,30 +41,30 @@ export default function FooterSection() {
                             Pages
                         </h3>
                         <div className="mt-6 flex flex-col items-start gap-4">
-                            <a
-                                href="#"
+                            <Link
+                                href="/"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
                                 Home
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="#"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
                                 Services
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="#"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
                                 Projects
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="#"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
                                 News
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div>
@@ -70,30 +72,30 @@ export default function FooterSection() {
                             Support
                         </h3>
                         <div className="mt-6 flex flex-col items-start gap-4">
-                            <a
+                            <Link
                                 href="#"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
                                 Help center
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="#"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
                                 Terms of service
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="#"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
                                 Legal
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="#"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
                                 Privacy policy
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div>
@@ -101,24 +103,24 @@ export default function FooterSection() {
                             Contact
                         </h3>
                         <div className="mt-6 flex flex-col items-start gap-4">
-                            <a
+                            <Link
                                 href="#"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
                                 hello@bookie.io
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="#"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
                                 + 46 526 220 0459
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="#"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
                                 + 46 526 220 0459
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -128,7 +130,7 @@ export default function FooterSection() {
                         © 2025 Bookie, Inc. All rights reserved.
                     </p>
                     <div className="flex items-center gap-4">
-                        <a href="#">
+                        <Link href="#">
                             <span className="sr-only">Facebook</span>
                             <svg
                                 className="size-5"
@@ -142,8 +144,8 @@ export default function FooterSection() {
                                     clipRule="evenodd"
                                 ></path>
                             </svg>
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link href="#">
                             <span className="sr-only">Instagram</span>
                             <svg
                                 className="size-5"
@@ -157,8 +159,8 @@ export default function FooterSection() {
                                     clipRule="evenodd"
                                 ></path>
                             </svg>
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link href="#">
                             <span className="sr-only">X</span>
                             <svg
                                 className="size-5"
@@ -168,8 +170,8 @@ export default function FooterSection() {
                             >
                                 <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z"></path>
                             </svg>
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link href="#">
                             <span className="sr-only">GitHub</span>
                             <svg
                                 className="size-5"
@@ -183,7 +185,7 @@ export default function FooterSection() {
                                     clipRule="evenodd"
                                 ></path>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
