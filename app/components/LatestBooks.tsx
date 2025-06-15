@@ -59,7 +59,7 @@ function BookModal({
     open,
     onClose,
 }: {
-    book: (typeof posts)[0];
+    book: (typeof posts)[0] | null;
     open: boolean;
     onClose: () => void;
 }) {
