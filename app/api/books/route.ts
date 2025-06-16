@@ -7,10 +7,11 @@ const options = {};
 let client: MongoClient;
 let clientPromise: Promise<MongoClient>;
 
+// Extend globalThis to include our custom properties for TypeScript
 declare global {
     // eslint-disable-next-line no-var
-    let _mongoClientPromise: Promise<MongoClient> | undefined;
-    let _dbConnected: boolean | undefined;
+    var _mongoClientPromise: Promise<MongoClient> | undefined;
+    var _dbConnected: boolean | undefined;
 }
 
 if (!process.env.MONGODB_URI) {
@@ -18,29 +19,23 @@ if (!process.env.MONGODB_URI) {
 }
 
 if (process.env.NODE_ENV === "development") {
-    // In development, use a global variable so that the value
-    // is preserved across module reloads caused by HMR (Hot Module Replacement).
-    if (!global._mongoClientPromise) {
+    // Use globalThis for custom properties
+    if (!globalThis._mongoClientPromise) {
         client = new MongoClient(uri, options);
-        global._mongoClientPromise = client.connect();
+        globalThis._mongoClientPromise = client.connect();
     }
-    clientPromise = global._mongoClientPromise;
+    clientPromise = globalThis._mongoClientPromise!;
 } else {
-    // In production, it's best to not use a global variable.
     client = new MongoClient(uri, options);
     clientPromise = client.connect();
 }
 
 async function connectToDatabase() {
     const client = await clientPromise;
-    // Check if the client is connected
-    if (!client || !client.topology || !client.topology.isConnected()) {
-        throw new Error("Failed to connect to MongoDB database.");
-    }
     // Log only once per process
-    if (!(globalThis as { _dbConnected?: boolean })._dbConnected) {
+    if (!globalThis._dbConnected) {
         console.log("✅ Connected to MongoDB database");
-        (globalThis as { _dbConnected?: boolean })._dbConnected = true;
+        globalThis._dbConnected = true;
     }
     return client.db(); // use default DB
 }
