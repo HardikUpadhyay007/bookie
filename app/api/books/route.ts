@@ -7,12 +7,12 @@ const options = {};
 let client: MongoClient;
 let clientPromise: Promise<MongoClient>;
 
-// Extend globalThis to include our custom properties for TypeScript
+/* eslint-disable no-var */
 declare global {
-    // eslint-disable-next-line no-unused-vars
     var _mongoClientPromise: Promise<MongoClient> | undefined;
     var _dbConnected: boolean | undefined;
 }
+/* eslint-enable no-var */
 
 if (!process.env.MONGODB_URI) {
     throw new Error("Please add your Mongo URI to .env.local");
