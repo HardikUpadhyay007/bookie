@@ -10,6 +10,7 @@ let clientPromise: Promise<MongoClient>;
 declare global {
     // eslint-disable-next-line no-var
     var _mongoClientPromise: Promise<MongoClient> | undefined;
+    var _dbConnected: boolean | undefined;
 }
 
 if (!process.env.MONGODB_URI) {
@@ -39,7 +40,7 @@ async function connectToDatabase() {
     // Log only once per process
     if (!(global as any)._dbConnected) {
         console.log("✅ Connected to MongoDB database");
-        (global as any)._dbConnected = true;
+        global._dbConnected = true;
     }
     return client.db(); // use default DB
 }
@@ -49,7 +50,7 @@ export async function GET() {
         const db = await connectToDatabase();
         const books = await db.collection("books").find({}).toArray();
         return NextResponse.json(books);
-    } catch (error) {
+    } catch {
         return NextResponse.json(
             { error: "Database connection failed." },
             { status: 500 }
