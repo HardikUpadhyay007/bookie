@@ -41,13 +41,15 @@ export default function HeroSection() {
                                     Browse Books
                                 </Button>
                             </Link>
-                            <Button
-                                size="lg"
-                                variant={"link"}
-                                className="text-lg text-white/90 hover:text-white"
-                            >
-                                Join the Community <ArrowRight />
-                            </Button>
+                            <Link href="/community">
+                                <Button
+                                    size="lg"
+                                    variant={"link"}
+                                    className="text-lg text-white/90 hover:text-white"
+                                >
+                                    Join the Community <ArrowRight />
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>

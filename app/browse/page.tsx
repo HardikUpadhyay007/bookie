@@ -2,260 +2,30 @@
 
 export const dynamic = "force-dynamic";
 
-import { useState, Suspense } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { ArrowRight, Download } from "lucide-react";
 import Image from "next/image";
 
-const books = [
-    {
-        id: 1,
-        title: "The Art of War",
-        date: "June 1, 2025",
-        excerpt:
-            "A comprehensive guide to mastering React.js, from fundamentals to advanced component patterns.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1746252000365-25e7fe205344?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8",
-        href: "#",
-        author: "Sun Tzu",
-        downloadUrl: "#",
-    },
-    {
-        id: 2,
-        title: "The Alchemist",
-        date: "May 20, 2025",
-        excerpt:
-            "Build beautiful, responsive UIs with Tailwind CSS. Includes real-world projects and tips.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1746068521443-9332b12c9ed8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Paulo Coelho",
-        downloadUrl: "#",
-    },
-    {
-        id: 3,
-        title: "The Da Vinci Code",
-        date: "April 15, 2025",
-        excerpt:
-            "Unlock the power of TypeScript with advanced typing, generics, and practical patterns.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Dan Brown",
-        downloadUrl: "#",
-    },
-    {
-        id: 4,
-        title: "Angels and Demons",
-        date: "March 10, 2025",
-        excerpt:
-            "A hands-on guide to building production-ready apps with Next.js, SSR, and API routes.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Dan Brown",
-        downloadUrl: "#",
-    },
-    {
-        id: 5,
-        title: "To Kill a Mockingbird",
-        date: "February 5, 2025",
-        excerpt:
-            "A timeless classic that explores human morality and the roots of prejudice.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Harper Lee",
-        downloadUrl: "#",
-    },
-    {
-        id: 6,
-        title: "1984",
-        date: "January 15, 2025",
-        excerpt:
-            "George Orwell's dystopian masterpiece, a chilling prophecy about the future.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "George Orwell",
-        downloadUrl: "#",
-    },
-    {
-        id: 7,
-        title: "Pride and Prejudice",
-        date: "December 20, 2024",
-        excerpt:
-            "Jane Austen's romantic classic, a witty commentary on society and relationships.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Jane Austen",
-        downloadUrl: "#",
-    },
-    {
-        id: 8,
-        title: "The Great Gatsby",
-        date: "November 10, 2024",
-        excerpt:
-            "F. Scott Fitzgerald's tale of wealth, love, and the American Dream.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "F. Scott Fitzgerald",
-        downloadUrl: "#",
-    },
-    {
-        id: 9,
-        title: "Moby Dick",
-        date: "October 1, 2024",
-        excerpt:
-            "Herman Melville's epic tale of obsession and revenge on the high seas.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Herman Melville",
-        downloadUrl: "#",
-    },
-    {
-        id: 10,
-        title: "Brave New World",
-        date: "September 15, 2024",
-        excerpt:
-            "Aldous Huxley's vision of a future society driven by technology and control.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Aldous Huxley",
-        downloadUrl: "#",
-    },
-    {
-        id: 11,
-        title: "Little Women",
-        date: "August 1, 2024",
-        excerpt:
-            "Louisa May Alcott's beloved story of four sisters growing up during the American Civil War.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Louisa May Alcott",
-        downloadUrl: "#",
-    },
-    {
-        id: 12,
-        title: "The Hobbit",
-        date: "July 10, 2024",
-        excerpt:
-            "J.R.R. Tolkien's classic adventure of Bilbo Baggins and his journey to the Lonely Mountain.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "J.R.R. Tolkien",
-        downloadUrl: "#",
-    },
-    {
-        id: 13,
-        title: "Crime and Punishment",
-        date: "June 5, 2024",
-        excerpt:
-            "Fyodor Dostoevsky's psychological drama of guilt, redemption, and morality.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Fyodor Dostoevsky",
-        downloadUrl: "#",
-    },
-    {
-        id: 14,
-        title: "The Catcher in the Rye",
-        date: "May 15, 2024",
-        excerpt:
-            "J.D. Salinger's coming-of-age novel about teenage alienation and rebellion.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "J.D. Salinger",
-        downloadUrl: "#",
-    },
-    {
-        id: 15,
-        title: "The Lord of the Rings",
-        date: "April 1, 2024",
-        excerpt:
-            "J.R.R. Tolkien's epic fantasy trilogy that changed the world of literature forever.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "J.R.R. Tolkien",
-        downloadUrl: "#",
-    },
-    {
-        id: 16,
-        title: "Frankenstein",
-        date: "March 10, 2024",
-        excerpt:
-            "Mary Shelley's gothic masterpiece about creation, ambition, and the dangers of playing God.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Mary Shelley",
-        downloadUrl: "#",
-    },
-    {
-        id: 17,
-        title: "Dracula",
-        date: "February 14, 2024",
-        excerpt:
-            "Bram Stoker's classic horror novel that introduced the world to Count Dracula.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Bram Stoker",
-        downloadUrl: "#",
-    },
-    {
-        id: 18,
-        title: "The Odyssey",
-        date: "January 5, 2024",
-        excerpt:
-            "Homer's ancient Greek epic poem chronicling Odysseus's adventurous return home.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Homer",
-        downloadUrl: "#",
-    },
-    {
-        id: 19,
-        title: "Wuthering Heights",
-        date: "December 1, 2023",
-        excerpt:
-            "Emily Brontë's only novel, a tale of passion and revenge on the Yorkshire moors.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Emily Brontë",
-        downloadUrl: "#",
-    },
-    {
-        id: 20,
-        title: "Great Expectations",
-        date: "November 10, 2023",
-        excerpt:
-            "Charles Dickens's story of the orphan Pip and his journey through life and society.",
-        imageUrl:
-            "https://images.unsplash.com/photo-1749046147908-e2879724fd0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D",
-        href: "#",
-        author: "Charles Dickens",
-        downloadUrl: "#",
-    },
-];
+// Remove the hardcoded books array
+
+type Book = {
+    id: string | number;
+    title: string;
+    date: string;
+    excerpt: string;
+    imageUrl: string;
+    href?: string;
+    author?: string;
+    downloadUrl?: string;
+};
 
 function BookModal({
     book,
     open,
     onClose,
 }: {
-    book: (typeof books)[0] | null;
+    book: Book | null;
     open: boolean;
     onClose: () => void;
 }) {
@@ -313,12 +83,23 @@ function BookModal({
 const BOOKS_PER_PAGE = 10;
 
 function BrowseContent() {
+    const [books, setBooks] = useState<Book[]>([]);
+    const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1);
-    const [selectedBook, setSelectedBook] = useState<null | (typeof books)[0]>(
-        null
-    );
+    const [selectedBook, setSelectedBook] = useState<null | Book>(null);
     const searchParams = useSearchParams();
     const search = searchParams.get("search") || "";
+
+    useEffect(() => {
+        setLoading(true);
+        fetch("/api/books")
+            .then((res) => res.json())
+            .then((data) => {
+                setBooks(data);
+                setLoading(false);
+            })
+            .catch(() => setLoading(false));
+    }, []);
 
     // Filter books by search
     const filteredBooks = books.filter(
@@ -339,7 +120,13 @@ function BrowseContent() {
                 <h1 className="text-3xl font-bold tracking-tight sm:text-4xl mb-8 text-center">
                     Browse Books
                 </h1>
-                {search && filteredBooks.length === 0 ? (
+                {loading ? (
+                    <div className="flex justify-center items-center py-32">
+                        <span className="text-lg text-neutral-400 animate-pulse">
+                            Loading books...
+                        </span>
+                    </div>
+                ) : search && filteredBooks.length === 0 ? (
                     <div className="flex flex-col items-center justify-center py-32">
                         <div className="rounded-2xl bg-neutral-900/80 px-8 py-12 shadow-lg border border-neutral-800 flex flex-col items-center">
                             <svg
@@ -370,7 +157,7 @@ function BrowseContent() {
                         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                             {booksToShow.map((book) => (
                                 <div
-                                    key={book.id}
+                                    key={book._id ?? book.id}
                                     className="flex flex-col items-center bg-neutral-900 rounded-2xl p-4 shadow-lg hover:shadow-2xl transition-shadow group cursor-pointer"
                                     onClick={() => setSelectedBook(book)}
                                 >

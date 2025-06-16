@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function FooterSection() {
     return (
-        <footer className="py-16 bg-black text-white">
+        <footer id="contact" className="py-16 bg-black text-white">
             <div className="mx-auto w-full max-w-7xl px-6">
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-5">
                     <div className="sm:col-span-3 lg:col-span-2">

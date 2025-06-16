@@ -7,21 +7,21 @@ import { Star } from "lucide-react";
 
 const quotes = [
     {
-        text: "Blookie has revolutionized my workflow. The amazing design blocks are a game changer.",
+        text: "Bookie makes it so easy to find and buy my next favorite read. The checkout process is smooth and the recommendations are always on point.",
         name: "Darla Craig",
-        role: "Software Engineer",
+        role: "Verified Buyer",
         avatar: "https://images.unsplash.com/flagged/photo-1578001357456-13f18a857b57?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-        text: "The best book platform I have ever used. Clean UI and seamless experience.",
+        text: "The best online bookstore I have ever used. Fast delivery, great prices, and a huge selection of books for every taste.",
         name: "Michael Lee",
-        role: "Product Designer",
+        role: "Book Collector",
         avatar: "https://images.unsplash.com/flagged/photo-1578001357456-13f18a857b57?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-        text: "I love the recommendations and the community. Five stars from me!",
+        text: "I love the community reviews and the ability to track my reading. Bookie is my go-to place for all things books!",
         name: "Sara Kim",
-        role: "Book Reviewer",
+        role: "Book Club Member",
         avatar: "https://images.unsplash.com/flagged/photo-1578001357456-13f18a857b57?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
 ];

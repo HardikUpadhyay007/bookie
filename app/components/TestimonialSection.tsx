@@ -5,23 +5,23 @@ import { Star } from "lucide-react";
 const testimonials = [
     {
         id: 1,
-        quote: "This UI kit has completely transformed the way I build interfaces. Everything is fast, accessible, and beautifully designed.",
+        quote: "Bookie has made discovering new books so easy! The recommendations are spot on and the community is so welcoming.",
         name: "Michael Craig",
-        role: "Frontend Developer",
+        role: "Avid Reader",
         avatarUrl: "https://untitledui.com/images/avatars/rayhan-zua",
     },
     {
         id: 2,
-        quote: "We were able to ship our MVP 3x faster thanks to the built-in components and documentation. Highly recommended!",
+        quote: "I love being able to track my reading progress and share reviews with friends. Bookie is my go-to book platform.",
         name: "Sophia Turner",
-        role: "Product Designer",
+        role: "Book Club Organizer",
         avatarUrl: "https://untitledui.com/images/avatars/freya-browning",
     },
     {
         id: 3,
-        quote: "From day one, the developer experience has been smooth. Great patterns, excellent performance, and top-notch support.",
+        quote: "The selection of books is fantastic and the interface is beautiful. Bookie has reignited my passion for reading.",
         name: "James Miller",
-        role: "Software Engineer",
+        role: "Literature Student",
         avatarUrl: "https://untitledui.com/images/avatars/franklin-mays",
     },
 ];
@@ -32,18 +32,18 @@ export default function TestimonialSection() {
             className="py-16 lg:py-32 text-white relative overflow-hidden"
             style={{
                 background:
-                    "linear-gradient(to bottom, rgba(23,23,23,0.93), rgba(23,23,23,0.97)), url('https://images.unsplash.com/photo-1536965764833-5971e0abed7c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat",
+                    "linear-gradient(to bottom, rgba(23,23,23,0.93), rgba(23,23,23,0.97)), url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3xlbnwwfHwwfHx8MA%3D%3D') center/cover no-repeat",
                 backgroundBlendMode: "multiply",
             }}
         >
             <div className="mx-auto w-full max-w-2xl px-6 lg:max-w-7xl">
                 <div className="mx-auto max-w-xl text-center">
                     <h2 className="text-3xl/tight font-semibold tracking-tight sm:text-4xl/tight text-white">
-                        What Users Say
+                        What Book Lovers Say
                     </h2>
                     <p className="text-muted-foreground mt-4 text-base/7 sm:text-lg/8 text-neutral-300">
-                        Aliquet adipiscing lectus praesent cras sed quis lectus
-                        egestas.
+                        Hear from our readers and community members about their
+                        Bookie experience.
                     </p>
                 </div>
                 <div className="mt-12 grid gap-8 lg:grid-cols-3">
