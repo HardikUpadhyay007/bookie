@@ -38,9 +38,9 @@ async function connectToDatabase() {
         throw new Error("Failed to connect to MongoDB database.");
     }
     // Log only once per process
-    if (!(global as any)._dbConnected) {
+    if (!(globalThis as { _dbConnected?: boolean })._dbConnected) {
         console.log("✅ Connected to MongoDB database");
-        global._dbConnected = true;
+        (globalThis as { _dbConnected?: boolean })._dbConnected = true;
     }
     return client.db(); // use default DB
 }
@@ -71,7 +71,7 @@ export async function POST(req: Request) {
         }
 
         return NextResponse.json({ success: true });
-    } catch (e) {
+    } catch {
         return NextResponse.json(
             { error: "Failed to add book(s) or connect to database." },
             { status: 500 }

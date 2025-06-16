@@ -17,8 +17,8 @@ export default function CommunityPage() {
                     Community Features Coming Soon
                 </h1>
                 <p className="text-lg text-neutral-300 mb-8 text-center">
-                    We're building a vibrant space for book lovers to connect,
-                    share, and discuss. Stay tuned for updates!
+                    We&apos;re building a vibrant space for book lovers to
+                    connect, share, and discuss. Stay tuned for updates!
                 </p>
                 <span className="inline-block rounded-full bg-primary/10 text-primary px-4 py-2 text-sm font-semibold">
                     Launching Fall 2025
