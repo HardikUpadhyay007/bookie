@@ -10,7 +10,8 @@ import Image from "next/image";
 // Remove the hardcoded books array
 
 type Book = {
-    id: string | number;
+    _id?: string; // <-- Add this line
+    id?: string | number;
     title: string;
     date: string;
     excerpt: string;
@@ -19,7 +20,6 @@ type Book = {
     author?: string;
     downloadUrl?: string;
 };
-
 function BookModal({
     book,
     open,
