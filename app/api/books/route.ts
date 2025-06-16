@@ -9,10 +9,9 @@ let clientPromise: Promise<MongoClient>;
 
 // Extend globalThis to include our custom properties for TypeScript
 declare global {
-    interface GlobalThis {
-        _mongoClientPromise?: Promise<MongoClient>;
-        _dbConnected?: boolean;
-    }
+    // eslint-disable-next-line no-unused-vars
+    var _mongoClientPromise: Promise<MongoClient> | undefined;
+    var _dbConnected: boolean | undefined;
 }
 
 if (!process.env.MONGODB_URI) {
