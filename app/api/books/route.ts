@@ -9,8 +9,8 @@ let clientPromise: Promise<MongoClient>;
 
 declare global {
     // eslint-disable-next-line no-var
-    var _mongoClientPromise: Promise<MongoClient> | undefined;
-    var _dbConnected: boolean | undefined;
+    let _mongoClientPromise: Promise<MongoClient> | undefined;
+    let _dbConnected: boolean | undefined;
 }
 
 if (!process.env.MONGODB_URI) {
