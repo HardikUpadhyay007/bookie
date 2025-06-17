@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: "https",
+                hostname: "res.cloudinary.com",
+            },
+            {
+                protocol: "https",
                 hostname: "d28hgpri8am2if.cloudfront.net",
             },
             {
