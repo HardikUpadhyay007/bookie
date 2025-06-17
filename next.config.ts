@@ -2,31 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
     images: {
-        remotePatterns: [
-            {
-                protocol: "https",
-                hostname: "images.unsplash.com",
-            },
-            {
-                protocol: "https",
-                hostname: "res.cloudinary.com",
-            },
-            {
-                protocol: "https",
-                hostname: "d28hgpri8am2if.cloudfront.net",
-            },
-            {
-                protocol: "https",
-                hostname: "images-na.ssl-images-amazon.com",
-            },
-            {
-                protocol: "https",
-                hostname: "compressed.photo.goodreads.com",
-            },
-            {
-                protocol: "https",
-                hostname: "untitledui.com",
-            },
+        domains: [
+            "images.unsplash.com",
+            "archive.org",
+            "res.cloudinary.com",
+            "d28hgpri8am2if.cloudfront.net",
+            "images-na.ssl-images-amazon.com",
+            "compressed.photo.goodreads.com",
+            "untitledui.com",
         ],
     },
 };
