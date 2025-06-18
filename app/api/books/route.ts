@@ -1,47 +1,11 @@
 import { NextResponse } from "next/server";
-import { MongoClient } from "mongodb";
+import { PrismaClient } from "@prisma/client";
 
-const uri = process.env.MONGODB_URI!;
-const options = {};
-
-let client: MongoClient;
-let clientPromise: Promise<MongoClient>;
-
-/* eslint-disable no-var */
-declare global {
-    var _mongoClientPromise: Promise<MongoClient> | undefined;
-    var _dbConnected: boolean | undefined;
-}
-/* eslint-enable no-var */
-
-if (!process.env.MONGODB_URI) {
-    throw new Error("Please add your Mongo URI to .env.local");
-}
-
-if (process.env.NODE_ENV === "development") {
-    if (!globalThis._mongoClientPromise) {
-        client = new MongoClient(uri, options);
-        globalThis._mongoClientPromise = client.connect();
-    }
-    clientPromise = globalThis._mongoClientPromise!;
-} else {
-    client = new MongoClient(uri, options);
-    clientPromise = client.connect();
-}
-
-async function connectToDatabase() {
-    const client = await clientPromise;
-    if (!globalThis._dbConnected) {
-        console.log("✅ Connected to MongoDB database");
-        globalThis._dbConnected = true;
-    }
-    return client.db();
-}
+const prisma = new PrismaClient();
 
 export async function GET() {
     try {
-        const db = await connectToDatabase();
-        const books = await db.collection("books").find({}).toArray();
+        const books = await prisma.book.findMany();
         return NextResponse.json(books);
     } catch {
         return NextResponse.json(
@@ -53,16 +17,12 @@ export async function GET() {
 
 export async function POST(req: Request) {
     try {
-        const db = await connectToDatabase();
         const body = await req.json();
-        const collection = db.collection("books");
-
         if (Array.isArray(body)) {
-            await collection.insertMany(body);
+            await prisma.book.createMany({ data: body });
         } else {
-            await collection.insertOne(body);
+            await prisma.book.create({ data: body });
         }
-
         return NextResponse.json({ success: true });
     } catch {
         return NextResponse.json(
@@ -71,5 +31,3 @@ export async function POST(req: Request) {
         );
     }
 }
-
-// You can also add PUT, DELETE for admin functionality
