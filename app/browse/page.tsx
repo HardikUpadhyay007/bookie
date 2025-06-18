@@ -10,7 +10,7 @@ import Image from "next/image";
 // Remove the hardcoded books array
 
 type Book = {
-    _id?: string; // <-- Add this line
+    _id?: string;
     id?: string | number;
     title: string;
     date: string;

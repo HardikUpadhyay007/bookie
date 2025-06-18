@@ -19,7 +19,6 @@ if (!process.env.MONGODB_URI) {
 }
 
 if (process.env.NODE_ENV === "development") {
-    // Use globalThis for custom properties
     if (!globalThis._mongoClientPromise) {
         client = new MongoClient(uri, options);
         globalThis._mongoClientPromise = client.connect();
@@ -32,12 +31,11 @@ if (process.env.NODE_ENV === "development") {
 
 async function connectToDatabase() {
     const client = await clientPromise;
-    // Log only once per process
     if (!globalThis._dbConnected) {
         console.log("✅ Connected to MongoDB database");
         globalThis._dbConnected = true;
     }
-    return client.db(); // use default DB
+    return client.db();
 }
 
 export async function GET() {
