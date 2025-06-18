@@ -7,8 +7,6 @@ import { useSearchParams } from "next/navigation";
 import { ArrowRight, Download } from "lucide-react";
 import Image from "next/image";
 
-// Remove the hardcoded books array
-
 type Book = {
     _id?: string;
     id?: string | number;
@@ -20,6 +18,7 @@ type Book = {
     author?: string;
     downloadUrl?: string;
 };
+
 function BookModal({
     book,
     open,
@@ -42,11 +41,15 @@ function BookModal({
                 </button>
                 <div className="flex flex-col sm:flex-row gap-6">
                     <Image
-                        src={book.imageUrl}
-                        alt={book.title}
+                        src={book.imageUrl || "/fallback.jpg"}
+                        alt={book.title || "Book cover"}
                         width={160}
                         height={224}
                         className="w-40 h-56 object-cover rounded-xl border-2 border-neutral-800 shadow-md mx-auto sm:mx-0"
+                        onError={(e) => {
+                            (e.target as HTMLImageElement).src =
+                                "/fallback.jpg";
+                        }}
                     />
                     <div className="flex-1 flex flex-col justify-between">
                         <div>
@@ -163,11 +166,18 @@ function BrowseContent() {
                                 >
                                     <div className="w-full flex justify-center">
                                         <Image
-                                            src={book.imageUrl}
-                                            alt={book.title}
+                                            src={
+                                                book.imageUrl || "/fallback.jpg"
+                                            }
+                                            alt={book.title || "Book cover"}
                                             width={160}
                                             height={224}
                                             className="aspect-[3/4] w-40 rounded-xl object-cover object-center border-2 border-neutral-800 shadow-md group-hover:scale-105 transition-transform"
+                                            onError={(e) => {
+                                                (
+                                                    e.target as HTMLImageElement
+                                                ).src = "/fallback.jpg";
+                                            }}
                                         />
                                     </div>
                                     <div className="mt-6 flex-1 w-full text-center">
