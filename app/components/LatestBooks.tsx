@@ -11,8 +11,7 @@ const posts = [
         excerpt:
             "A comprehensive guide to mastering React.js, from fundamentals to advanced component patterns.",
         imageUrl:
-            "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781626860605/the-art-of-war-9781626860605_hr.jpg",
-        href: "#",
+            "https://images.unsplash.com/photo-1744381582488-b20ab7903239?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D",
         author: "Sun Tzu",
         downloadUrl: "#",
     },
@@ -23,7 +22,7 @@ const posts = [
         excerpt:
             "Build beautiful, responsive UIs with Tailwind CSS. Includes real-world projects and tips.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg",
+            "https://images.unsplash.com/photo-1744381582488-b20ab7903239?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Paulo Coelho",
         downloadUrl: "#",
@@ -35,7 +34,7 @@ const posts = [
         excerpt:
             "Unlock the power of TypeScript with advanced typing, generics, and practical patterns.",
         imageUrl:
-            "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1597798677i/55019161.jpg",
+            "https://images.unsplash.com/photo-1744381582488-b20ab7903239?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Dan Brown",
         downloadUrl: "#",
@@ -47,7 +46,7 @@ const posts = [
         excerpt:
             "A hands-on guide to building production-ready apps with Next.js, SSR, and API routes.",
         imageUrl:
-            "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9780593653960/angels-and-demons-9780593653960_hr.jpg",
+            "https://images.unsplash.com/photo-1744381582488-b20ab7903239?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D",
         href: "#",
         author: "Dan Brown",
         downloadUrl: "#",
@@ -80,6 +79,10 @@ function BookModal({
                         alt={book.title}
                         width={160}
                         height={224}
+                        onError={(e) => {
+                            (e.target as HTMLImageElement).src =
+                                "/fallback.jpg";
+                        }}
                         className="w-40 h-56 object-cover rounded-xl border-2 border-neutral-800 shadow-md mx-auto sm:mx-0"
                     />
                     <div className="flex-1 flex flex-col justify-between">
@@ -153,6 +156,10 @@ export default function LatestBooks() {
                                     alt={post.title}
                                     width={160}
                                     height={224}
+                                    onError={(e) => {
+                                        (e.target as HTMLImageElement).src =
+                                            "/fallback.jpg";
+                                    }}
                                     className="aspect-[3/4] w-40 rounded-xl object-cover object-center border-2 border-neutral-800 shadow-md group-hover:scale-105 transition-transform"
                                 />
                             </div>

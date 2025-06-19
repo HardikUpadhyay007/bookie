@@ -10,19 +10,19 @@ const quotes = [
         text: "Bookie makes it so easy to find and buy my next favorite read. The checkout process is smooth and the recommendations are always on point.",
         name: "Darla Craig",
         role: "Verified Buyer",
-        avatar: "https://images.unsplash.com/flagged/photo-1578001357456-13f18a857b57?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        avatar: "https://images.unsplash.com/photo-1750128913891-f87924374d77?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMnx8fGVufDB8fHx8fA%3D%3D",
     },
     {
         text: "The best online bookstore I have ever used. Fast delivery, great prices, and a huge selection of books for every taste.",
         name: "Michael Lee",
         role: "Book Collector",
-        avatar: "https://images.unsplash.com/flagged/photo-1578001357456-13f18a857b57?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        avatar: "https://images.unsplash.com/photo-1750128913891-f87924374d77?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMnx8fGVufDB8fHx8fA%3D%3D",
     },
     {
         text: "I love the community reviews and the ability to track my reading. Bookie is my go-to place for all things books!",
         name: "Sara Kim",
         role: "Book Club Member",
-        avatar: "https://images.unsplash.com/flagged/photo-1578001357456-13f18a857b57?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        avatar: "https://images.unsplash.com/photo-1750128913891-f87924374d77?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMnx8fGVufDB8fHx8fA%3D%3D",
     },
 ];
 

@@ -98,10 +98,14 @@ function BrowseContent() {
         fetch("/api/books")
             .then((res) => res.json())
             .then((data) => {
-                setBooks(data);
+                // If data is not an array, set to empty array
+                setBooks(Array.isArray(data) ? data : []);
                 setLoading(false);
             })
-            .catch(() => setLoading(false));
+            .catch(() => {
+                setBooks([]);
+                setLoading(false);
+            });
     }, []);
 
     // Filter books by search
