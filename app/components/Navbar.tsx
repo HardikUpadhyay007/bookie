@@ -219,9 +219,14 @@ export default function Navbar() {
     const handleSearch = (e: React.FormEvent) => {
         e.preventDefault();
         const path = `/browse?search=${encodeURIComponent(search)}`;
-        pathname === "/browse" ? router.replace(path) : router.push(path);
+
+        if (pathname === "/browse") {
+            router.replace(path);
+        } else {
+            router.push(path);
+        }
+
         setSearch("");
-        setShowMobileSearch(false);
     };
 
     return (
@@ -249,9 +254,14 @@ export default function Navbar() {
                             </SignInButton>
                         )}
                         <Sheet open={openSheet} onOpenChange={setOpenSheet}>
-                            <SheetTrigger asChild>
-                                <Button variant="outline" size="icon">
-                                    <Menu className="hover:text-black" />
+                            <SheetTrigger asChild className="ml-auto lg:hidden">
+                                <Button
+                                    variant="outline"
+                                    size="icon"
+                                    className="rounded-full bg-neutral-900/80 border-none shadow-md hover:bg-primary/20 focus:ring-2 focus:ring-primary transition-all duration-200"
+                                    aria-label="Open menu"
+                                >
+                                    <Menu className="w-7 h-7 text-white" />
                                 </Button>
                             </SheetTrigger>
                             <SheetContent className="flex w-[90%] max-w-sm flex-col px-6 py-6">
@@ -335,15 +345,19 @@ export default function Navbar() {
                         />
                     </form>
 
-                    <div className="flex gap-4 items-center">
+                    <div className="hidden gap-2 lg:inline-flex">
                         {navItems.map((i) => (
                             <Button
                                 key={i.title}
                                 asChild
                                 variant="ghost"
-                                className="hover:text-white hover:underline"
+                                className="relative overflow-hidden rounded-lg px-4 py-2 font-medium transition-all duration-200
+                before:absolute before:inset-0 before:bg-primary/20 before:opacity-0 hover:before:opacity-100
+                before:transition-opacity before:duration-200"
                             >
-                                <Link href={i.href}>{i.title}</Link>
+                                <Link href={i.href} className="relative z-10">
+                                    {i.title}
+                                </Link>
                             </Button>
                         ))}
                     </div>
@@ -374,12 +388,14 @@ export default function Navbar() {
                                 <UserButton afterSignOutUrl="/" />
                             </>
                         )}
-                        <Button
-                            className="px-4 py-2 rounded bg-primary text-white hover:bg-primary/80"
+                        <button
+                            className="relative overflow-hidden rounded-lg px-4 py-2 font-medium bg-primary text-white transition-all duration-200
+        before:absolute before:inset-0 before:bg-white/20 before:opacity-0 hover:before:opacity-100
+        before:transition-opacity before:duration-200"
                             onClick={() => setShowAdminModal(true)}
                         >
-                            Admin
-                        </Button>
+                            <span className="relative z-10">Admin</span>
+                        </button>
                     </div>
                 </div>
             </nav>
