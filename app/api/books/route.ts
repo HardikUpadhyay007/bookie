@@ -66,7 +66,7 @@ export async function GET() {
     } catch (e) {
         console.error(e);
         return NextResponse.json(
-            { error: "Database connection failed." },
+            { e: "Database connection failed." },
             { status: 500 }
         );
     }
@@ -99,7 +99,7 @@ export async function POST(req: Request) {
         return NextResponse.json({ success: true });
     } catch (e) {
         return NextResponse.json(
-            { error: "Failed to add book(s) or connect to database." },
+            { e: "Failed to add book(s) or connect to database." },
             { status: 500 }
         );
     }
