@@ -37,7 +37,6 @@ export default function Navbar() {
                         href="/"
                         className="inline-flex flex-1 items-center gap-2"
                     >
-                        {/* Your SVG Logo */}
                         <svg
                             width="28"
                             height="28"
@@ -66,9 +65,13 @@ export default function Navbar() {
                             const path = `/browse?search=${encodeURIComponent(
                                 search
                             )}`;
-                            pathname === "/browse"
-                                ? router.replace(path)
-                                : router.push(path);
+
+                            if (pathname === "/browse") {
+                                router.replace(path);
+                            } else {
+                                router.push(path);
+                            }
+
                             setSearch("");
                         }}
                     >
@@ -166,7 +169,7 @@ export default function Navbar() {
                     <div className="flex items-center gap-4">
                         <button
                             className="px-4 py-2 rounded bg-primary text-white hover:bg-primary/80"
-                            onClick={() => setShowAdminModal(true)} // ✅ This calls the function
+                            onClick={() => setShowAdminModal(true)}
                         >
                             Admin
                         </button>
@@ -174,7 +177,7 @@ export default function Navbar() {
                 </div>
             </nav>
 
-            {/* ✅ Modal outside nav */}
+            {/* Modal outside nav */}
             {showAdminModal && (
                 <AdminModal onClose={() => setShowAdminModal(false)} />
             )}
