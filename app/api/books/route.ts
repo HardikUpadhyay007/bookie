@@ -64,6 +64,7 @@ export async function GET() {
         const books = await prisma.book.findMany();
         return NextResponse.json(books);
     } catch (e) {
+        console.error(e);
         return NextResponse.json(
             { error: "Database connection failed." },
             { status: 500 }

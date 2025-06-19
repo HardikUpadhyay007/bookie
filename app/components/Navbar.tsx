@@ -166,7 +166,7 @@ export default function Navbar() {
                     <div className="flex items-center gap-4">
                         <button
                             className="px-4 py-2 rounded bg-primary text-white hover:bg-primary/80"
-                            onClick={() => setShowAdminModal(true)}
+                            onClick={() => setShowAdminModal(true)} // ✅ This calls the function
                         >
                             Admin
                         </button>
