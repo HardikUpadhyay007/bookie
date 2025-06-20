@@ -9,9 +9,9 @@ const posts = [
         title: "The Art of War",
         date: "June 1, 2025",
         excerpt:
-            "A comprehensive guide to mastering React.js, from fundamentals to advanced component patterns.",
+            "The Art of War is an ancient Chinese military treatise attributed to Sun Tzu. Through concise and profound strategies, it explores the principles of warfare, leadership, and tactical planning, offering timeless wisdom on conflict, competition, and the art of winning without fighting.",
         imageUrl:
-            "https://images.unsplash.com/photo-1744381582488-b20ab7903239?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D",
+            "https://res.cloudinary.com/dtfymz8ko/image/upload/v1750393237/71MizulW5AL_yf3dku.jpg",
         author: "Sun Tzu",
         downloadUrl: "#",
     },
@@ -20,9 +20,9 @@ const posts = [
         title: "The Alchemist",
         date: "May 20, 2025",
         excerpt:
-            "Build beautiful, responsive UIs with Tailwind CSS. Includes real-world projects and tips.",
+            "The Alchemist follows Santiago, a young shepherd, on his journey across the desert in search of a hidden treasure. Along the way, he learns profound lessons about listening to his heart, following his dreams, and discovering his true destiny.",
         imageUrl:
-            "https://images.unsplash.com/photo-1744381582488-b20ab7903239?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D",
+            "https://res.cloudinary.com/dtfymz8ko/image/upload/v1750135555/gp1p8mwin2rqk9xtpr1t.jpg",
         href: "#",
         author: "Paulo Coelho",
         downloadUrl: "#",
@@ -32,9 +32,9 @@ const posts = [
         title: "The Da Vinci Code",
         date: "April 15, 2025",
         excerpt:
-            "Unlock the power of TypeScript with advanced typing, generics, and practical patterns.",
+            "The Da Vinci Code is a fast-paced thriller that follows symbologist Robert Langdon as he unravels a conspiracy involving the Catholic Church and a secret society. With clues hidden in famous artworks",
         imageUrl:
-            "https://images.unsplash.com/photo-1744381582488-b20ab7903239?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D",
+            "https://res.cloudinary.com/dtfymz8ko/image/upload/v1750393279/55019161_bwivmo.jpg",
         href: "#",
         author: "Dan Brown",
         downloadUrl: "#",
@@ -44,9 +44,9 @@ const posts = [
         title: "Angels and Demons",
         date: "March 10, 2025",
         excerpt:
-            "A hands-on guide to building production-ready apps with Next.js, SSR, and API routes.",
+            "Angels and Demons is a gripping thriller that follows symbologist Robert Langdon as he uncovers a conspiracy involving the Illuminati, a secret society bent on destroying the Vatican. With time running",
         imageUrl:
-            "https://images.unsplash.com/photo-1744381582488-b20ab7903239?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D",
+            "https://res.cloudinary.com/dtfymz8ko/image/upload/v1750393296/960_zkeg96.jpg",
         href: "#",
         author: "Dan Brown",
         downloadUrl: "#",
