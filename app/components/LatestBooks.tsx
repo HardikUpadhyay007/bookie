@@ -6,50 +6,53 @@ import Image from "next/image";
 const posts = [
     {
         id: 1,
-        title: "The Art of War",
-        date: "June 1, 2025",
+        title: "A Tale of Two Cities",
+        date: "1859",
         excerpt:
-            "The Art of War is an ancient Chinese military treatise attributed to Sun Tzu. Through concise and profound strategies, it explores the principles of warfare, leadership, and tactical planning, offering timeless wisdom on conflict, competition, and the art of winning without fighting.",
+            "Set during the French Revolution, it explores themes of sacrifice, justice, and resurrection.",
         imageUrl:
-            "https://res.cloudinary.com/dtfymz8ko/image/upload/v1750393237/71MizulW5AL_yf3dku.jpg",
-        author: "Sun Tzu",
-        downloadUrl: "#",
+            "https://res.cloudinary.com/dtfymz8ko/image/upload/v1750136990/9780451530578_cfw4pk.jpg",
+        author: "Charles Dickens",
+        downloadUrl:
+            "https://bookie-inky.vercel.app/pdfs/a-tale-of-two-cities.pdf",
     },
     {
         id: 2,
-        title: "The Alchemist",
-        date: "May 20, 2025",
+        title: "A Christmas Carol",
+        date: "19 December 1843",
         excerpt:
-            "The Alchemist follows Santiago, a young shepherd, on his journey across the desert in search of a hidden treasure. Along the way, he learns profound lessons about listening to his heart, following his dreams, and discovering his true destiny.",
+            "Published in 1843, this classic has been adapted many times for film, theater, radio, and more. Ebenezer Scrooge is confronted by three spirits at Christmas, who urge him to change his miserly ways.",
         imageUrl:
-            "https://res.cloudinary.com/dtfymz8ko/image/upload/v1750135555/gp1p8mwin2rqk9xtpr1t.jpg",
+            "https://res.cloudinary.com/dtfymz8ko/image/upload/v1751256465/63fe527dae944cddd900a2a1_ACC_20-_20Show_20Graphic.opt_kdl2ag.webp",
         href: "#",
-        author: "Paulo Coelho",
-        downloadUrl: "#",
+        author: "Charles Dickens",
+        downloadUrl:
+            "https://bookie-inky.vercel.app/pdfs/a-christmas-carol.pdf",
     },
     {
         id: 3,
-        title: "The Da Vinci Code",
-        date: "April 15, 2025",
+        title: "Crime and Punishment",
+        date: "1867",
         excerpt:
-            "The Da Vinci Code is a fast-paced thriller that follows symbologist Robert Langdon as he unravels a conspiracy involving the Catholic Church and a secret society. With clues hidden in famous artworks",
+            "Rodion Raskolnikov, an ex-student who plans to murder a pawnbroker to test his theory of personality. Having accomplished the deed, Raskolnikov struggles with mental anguish while trying to both avoid the consequences and hide his guilt from his friends and family. Dostoevsky’s original idea for the novel centered on the Marmeladov family and the impact of alcoholism in Russia, but inspired by a double murder in France he decided to rework it around the new character of Raskolnikov.",
         imageUrl:
-            "https://res.cloudinary.com/dtfymz8ko/image/upload/v1750393279/55019161_bwivmo.jpg",
+            "https://res.cloudinary.com/dtfymz8ko/image/upload/v1751258695/Crimeandpunishmentcover_larqd5.png",
         href: "#",
-        author: "Dan Brown",
-        downloadUrl: "#",
+        author: "Fyodor Dostoevsky",
+        downloadUrl:
+            "https://bookie-inky.vercel.app/pdfs/crime-and-punishment.pdf",
     },
     {
         id: 4,
-        title: "Angels and Demons",
-        date: "March 10, 2025",
+        title: "Arsène Lupin Versus Herlock Sholmes",
+        date: "1908",
         excerpt:
-            "Angels and Demons is a gripping thriller that follows symbologist Robert Langdon as he uncovers a conspiracy involving the Illuminati, a secret society bent on destroying the Vatican. With time running",
+            "Arsène Lupin takes on his most fearsome opponent yet in this second collection of his larcenous adventures. More a loving homage than a straight copy, Herlock Sholmes (changed just enough to avoid fallout from a copyright claim by Conan Doyle) and his companion Wilson are summoned to France initially to throw light on the case of the Blonde Lady. Having encountered Arsène Lupin before, Sholmes is only too happy to get a chance of revenge. This collection of two stories were originally serialised in the magazine Je Sais Tout from 1906 to 1907, and were translated into English in 1910.",
         imageUrl:
-            "https://res.cloudinary.com/dtfymz8ko/image/upload/v1750393296/960_zkeg96.jpg",
+            "https://res.cloudinary.com/dtfymz8ko/image/upload/v1751258187/Ars_C3_A8ne_Lupin_contre_Herlock_Sholm_C3_A8s_zoqbnv.jpg",
         href: "#",
-        author: "Dan Brown",
-        downloadUrl: "#",
+        author: "Maurice Leblanc",
+        downloadUrl: "https://bookie-inky.vercel.app/pdfs/lupin.pdf",
     },
 ];
 
