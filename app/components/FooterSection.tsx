@@ -31,8 +31,9 @@ export default function FooterSection() {
                                 </span>
                             </Link>
                             <p className="mt-6 text-sm/6 text-white/80">
-                                Bookie helps you build beautiful websites faster
-                                with ready-to-use components and templates.
+                                Discover, explore, and download your favorite
+                                books with Bookie - your ultimate online
+                                destination for reading.
                             </p>
                         </div>
                     </div>
@@ -48,25 +49,26 @@ export default function FooterSection() {
                                 Home
                             </Link>
                             <Link
-                                href="#"
+                                href="/browse"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
-                                Services
+                                Browse Books
                             </Link>
                             <Link
-                                href="#"
+                                href="/community"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
-                                Projects
+                                Community
                             </Link>
                             <Link
-                                href="#"
+                                href="/pricing"
                                 className="text-white/70 hover:text-white text-sm font-medium transition-colors"
                             >
-                                News
+                                Pricing
                             </Link>
                         </div>
                     </div>
+                    {/* ...rest of your footer sections remain the same... */}
                     <div>
                         <h3 className="text-base font-semibold tracking-tight">
                             Support
