@@ -83,7 +83,7 @@ function BookModal({
     );
 }
 
-const BOOKS_PER_PAGE = 10;
+const BOOKS_PER_PAGE = 12;
 
 function BrowseContent() {
     const [books, setBooks] = useState<Book[]>([]);
