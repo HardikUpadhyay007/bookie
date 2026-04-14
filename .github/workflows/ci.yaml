@@ -1,28 +1,39 @@
-name: CI Pipeline
+name: Bookie Dispatcher
 
 on:
-  push:
-    branches: ["main"]
-  pull_request:
-  workflow_dispatch:   
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Select environment"
+        required: true
+        default: "dev"
+        type: choice
+        options:
+          - dev
+          - prod
+
+      run_build:
+        description: "Run build step"
+        required: true
+        default: true
+        type: boolean
+
 jobs:
-  build:
+  dispatch-job:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Show selected inputs
+        run: |
+          echo "Environment: ${{ github.event.inputs.environment }}"
+          echo "Run Build: ${{ github.event.inputs.run_build }}"
+
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run lint
-        run: npm run lint
-
       - name: Build project
+        if: ${{ github.event.inputs.run_build == 'true' }}
         run: npm run build
