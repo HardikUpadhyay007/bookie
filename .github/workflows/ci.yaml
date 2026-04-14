@@ -1,4 +1,4 @@
-name: Bookie Dispatcher
+name: Bookie CI/CD Dispatcher
 
 on:
   workflow_dispatch:
@@ -19,21 +19,37 @@ on:
         type: boolean
 
 jobs:
-  dispatch-job:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Show selected inputs
-        run: |
-          echo "Environment: ${{ github.event.inputs.environment }}"
-          echo "Run Build: ${{ github.event.inputs.run_build }}"
-
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
       - name: Install dependencies
         run: npm install
 
+      - name: Show inputs
+        run: |
+          echo "Environment: ${{ github.event.inputs.environment }}"
+          echo "Run Build: ${{ github.event.inputs.run_build }}"
+
       - name: Build project
         if: ${{ github.event.inputs.run_build == 'true' }}
         run: npm run build
+        env:
+          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
+
+      - name: Success message
+        run: echo "Build completed successfully 🚀"
